@@ -72,11 +72,11 @@ jobs:
 #       name: workflow_${{ steps.date.outputs.date }}
 #       path: .github/workflows/m3u8_converter.yml
        
-#    - name: Commit All Files
-#      uses: zwaldowski/git-commit-action@v1
-#      with:
-#             commit_message: Updated by Bot - ${{ steps.date.outputs.date }}
-#             working_directory: .
+    - name: Commit All Files
+      uses: zwaldowski/git-commit-action@v1
+      with:
+             commit_message: Updated by Bot - ${{ steps.date.outputs.date }}
+             working_directory: .
 
     - name: Push changes
       uses: ad-m/github-push-action@master
