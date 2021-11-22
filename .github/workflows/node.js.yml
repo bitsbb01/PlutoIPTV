@@ -13,7 +13,7 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
-
+          
     strategy:
       matrix:
         node-version: [12.x, 14.x, 16.x]
@@ -26,6 +26,13 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
+    
+    - run:
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git rm ./*.m3u8
+          git rm ./*.xml
+  
     - run: npx pluto-iptv 
 
 
