@@ -229,8 +229,8 @@ ${m3uUrl}
     }
   );
 
-  fs.writeFileSync('./epg/epg.xml', epg);
-  console.log('[SUCCESS] Wrote the EPG to ./epg/epg.xml!');
+  fs.writeFileSync('./plutoepg.xml', epg);
+  console.log('[SUCCESS] Wrote the EPG to ./plutoepg.xml!');
 
   fs.writeFileSync('./m3u8/playlist.m3u8', m3u8);
   console.log('[SUCCESS] Wrote the M3U8 tuner to ./m3u8/playlist.m3u8!');
