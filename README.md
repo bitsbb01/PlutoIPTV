@@ -1,6 +1,6 @@
 # PlutoIPTV
 
-Grab EPG &amp; M3U from Pluto.tv
+Grab EPG &amp; M3U from Pluto.tv (updated to grab every 3hrs)
 
 Based on https://github.com/TylerB260/PlutoXML
 
