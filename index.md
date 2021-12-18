@@ -1,37 +1,37 @@
-## Welcome to GitHub Pages
+# PlutoIPTV
 
-You can use the [editor on GitHub](https://github.com/bitsbb01/PlutoIPTV/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+Grab EPG &amp; M3U from Pluto.tv (updated to grab every 3hrs)
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Based on https://github.com/TylerB260/PlutoXML
 
-### Markdown
+## Usage
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+### Run
 
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+```bash
+$ npx pluto-iptv
 ```
 
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
+This will create an `epg.xml` file and a `playlist.m3u` file
 
-### Jekyll Themes
+#### Filtering for favorites
+If you don't want all channels from pluto, you can create a "favorites" file: `pluto-favorites`.  In this file, one per line, you can list "slugs" of channels and only those channels will be downloaded.  You can add comments by starting the line with `#`.
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/bitsbb01/PlutoIPTV/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+Example:
+```text
+# Nostalgia
+80s-rewind
+90s-throwback
+after-school-cartoons
 
-### Support or Contact
+# Music
+vevo-80s
+vevo-90s
+vevo-pop
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+# News
+black-news-channel
+cbsn-2
+nbc-news-now
+pluto-tv-news
+```
